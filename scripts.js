@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (projectToggleBtn) {
     projectToggleBtn.addEventListener('click', () => {
       projects.forEach(project => {
-        project.style.display = (project.style.display === 'none' || project.style.display === '') ? 'block' : 'none';
+        project.classList.toggle('hidden');
       });
     });
   }
@@ -15,7 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeBtn = document.querySelector('#themeToggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-theme');
+      document.body.classList.add('transitioning');
+      setTimeout(() => {
+        document.body.classList.toggle('light-theme');
+        document.body.classList.remove('transitioning');
+      }, 50);
     });
   }
 
