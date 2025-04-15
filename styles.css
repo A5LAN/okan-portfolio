@@ -3,15 +3,15 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f7fa;
-  color: #2e2e2e;
+  background-color: #1e1e2f;
+  color: #f5f5f5;
   line-height: 1.6;
 }
 
 header {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   text-align: center;
   animation: fadeIn 2s ease-in-out;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -24,34 +24,97 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 header p {
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 main {
-  padding: 3rem 1rem;
-  max-width: 1100px;
+  padding: 2rem 1rem;
+  max-width: 1000px;
   margin: auto;
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
-.proficiency-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.project {
+  background-color: #2b2d42;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.project p {
+  margin: 0.25rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0f2027;
+  color: white;
+}
+
+.toggle-btn {
+  background-color: #00b894;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.proficiencies-container {
   text-align: center;
 }
 
+.proficiencies-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.proficiency-item {
+  text-align: center;
+  max-width: 120px;
+}
+
+.highlighted {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.highlighted img {
+  width: 200px;
+  height: auto;
+}
+
 .proficiency-item img {
-  max-width: 70px;
+  width: 64px;
   height: auto;
   margin-bottom: 0.5rem;
   transition: transform 0.3s ease;
@@ -63,101 +126,26 @@ section {
 
 .proficiency-item p {
   font-size: 0.95rem;
-  color: #333;
+  color: #f5f5f5;
 }
 
-.license-list {
-  list-style: none;
-  padding-left: 0;
-  font-size: 1rem;
-  line-height: 1.6;
+.licenses {
+  margin-top: 2rem;
 }
 
-
-h2 {
-  border-bottom: 3px solid #23395d;
-  padding-bottom: 0.5rem;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.project {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.project h3 {
-  font-size: 1.5rem;
-  margin: 0 0 0.5rem 0;
-}
-
-.project p {
-  margin: 0.25rem 0;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #23395d;
-  color: white;
-}
-
-a {
-  color: #2a5298;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Button Styles */
-.toggle-btn {
-  background-color: #23395d;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-
-.toggle-btn:hover {
-  background-color: #1e3c72;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
-
-  header p {
-    font-size: 1rem;
-  }
-
   .project {
-    padding: 1rem;
+    padding: 0.75rem;
   }
-
   .toggle-btn {
     width: 100%;
-    padding: 1rem;
+    padding: 0.75rem;
   }
-
   main {
-    padding: 2rem 1rem;
+    padding: 1rem;
   }
 }
