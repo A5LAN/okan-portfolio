@@ -1,4 +1,8 @@
 /* Global Styles */
+body, header, .project {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
