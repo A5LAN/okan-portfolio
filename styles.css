@@ -135,12 +135,12 @@ footer {
 }
 
 .highlighted {
-  flex: 1 1 100%;
+  flex: 1 1 %;
   text-align: center;
 }
 
 .highlighted img {
-  width: 200px;
+  width: 150px;
   height: auto;
 }
 
