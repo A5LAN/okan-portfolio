@@ -3,100 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Okan Dodanli is a GIS Consultant specializing in Remote Sensing, Web Mapping, and Python Automation for the geospatial industry." />
+  <meta name="keywords" content="GIS, Remote Sensing, Web Mapping, Python, Spatial Data, Okan Dodanli" />
+  <meta name="author" content="Okan Dodanli" />
   <title>Okan Dodanli | GIS Consultant Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f7fa;
-      color: #2e2e2e;
-    }
-    header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-    }
-    main {
-      padding: 2rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
-    .project {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .project:hover {
-      transform: scale(1.02);
-    }
-    .project h3 {
-      margin: 0 0 0.5rem 0;
-    }
-    .project p {
-      margin: 0.25rem 0;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #23395d;
-      color: white;
-    }
-    .toggle-btn {
-      background-color: #23395d;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      .project {
-        padding: 0.75rem;
-      }
-      .toggle-btn {
-        width: 100%;
-        padding: 0.75rem;
-      }
-      main {
-        padding: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -150,14 +63,5 @@
   <footer>
     &copy; 2025 Okan Dodanli. All rights reserved.
   </footer>
-
-  <script>
-    function toggleProjects() {
-      const projects = document.querySelectorAll('.project');
-      projects.forEach(proj => {
-        proj.style.display = (proj.style.display === 'none') ? 'block' : 'none';
-      });
-    }
-  </script>
 </body>
 </html>
