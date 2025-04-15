@@ -223,8 +223,14 @@ body.light-theme .proficiency-item img {
 .about-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  
+}
+
+.about-content p{
+  position:relative;
+  left: 25px;
+  margin-right:50px;
+  
 }
 
 .about-photo {
