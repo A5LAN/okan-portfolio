@@ -42,6 +42,38 @@ section {
   margin-bottom: 3rem;
 }
 
+.proficiency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.proficiency-item img {
+  max-width: 70px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.proficiency-item img:hover {
+  transform: scale(1.1);
+}
+
+.proficiency-item p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.license-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
 h2 {
   border-bottom: 3px solid #23395d;
   padding-bottom: 0.5rem;
