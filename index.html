@@ -5,123 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Okan Dodanli | GIS Consultant Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-   
-    header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-    }
-    main {
-      padding: 2rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-    }
-    .project {
-      background-color: #2b2d42;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-    .project:hover {
-      transform: scale(1.02);
-    }
-    .project h3 {
-      margin: 0 0 0.5rem 0;
-    }
-    .project p {
-      margin: 0.25rem 0;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #0f2027;
-      color: white;
-    }
-    .toggle-btn {
-      background-color: #00b894;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
-    .proficiencies-container {
-      text-align: center;
-    }
-    .proficiencies-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .proficiency-item {
-      text-align: center;
-      max-width: 120px;
-    }
-    .highlighted {
-      flex: 1 1 100%;
-      text-align: center;
-    }
-    .highlighted img {
-      width: 200px;
-      height: auto;
-    }
-    .proficiency-item img {
-      width: 64px;
-      height: auto;
-    }
-    .licenses {
-      margin-top: 2rem;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .project {
-        padding: 0.75rem;
-      }
-      .toggle-btn {
-        width: 100%;
-        padding: 0.75rem;
-      }
-      main {
-        padding: 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1>Okan Dodanli</h1>
     <p>GIS Analyst | Remote Sensing | Web Mapping | Python Automation</p>
+    <button class="theme-toggle">Toggle Theme</button>
   </header>
 
   <main>
@@ -215,28 +104,6 @@
     &copy; 2025 Okan Dodanli. All rights reserved.
   </footer>
 
-  <script>
-    function toggleProjects() {
-      const projects = document.querySelectorAll('.project');
-      projects.forEach(proj => {
-        proj.style.display = (proj.style.display === 'none') ? 'block' : 'none';
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const headerText = document.querySelector('header h1');
-      let text = headerText.innerText;
-      headerText.innerText = '';
-
-      let i = 0;
-      const typeWriter = setInterval(() => {
-        headerText.innerText += text[i];
-        i++;
-        if (i > text.length - 1) {
-          clearInterval(typeWriter);
-        }
-      }, 100);
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
