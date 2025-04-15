@@ -11,14 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Theme toggle button
-  const themeBtn = document.querySelector('#themeToggle');
+  // Theme toggle button with emoji swap and localStorage
+  const themeBtn = document.querySelector('#theme-toggle');
+
+  const setThemeIcon = () => {
+    const isLight = document.body.classList.contains('light-theme');
+    themeBtn.textContent = isLight ? '☀️' : '🌙';
+  };
+
+  // Load theme preference
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-theme');
+  }
+  setThemeIcon();
+
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
       document.body.classList.add('transitioning');
       setTimeout(() => {
-        document.body.classList.toggle('light-theme');
+        const isLight = document.body.classList.toggle('light-theme');
         document.body.classList.remove('transitioning');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        setThemeIcon();
       }, 50);
     });
   }
