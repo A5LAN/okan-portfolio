@@ -7,7 +7,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #1e1e2f;
+  background-color: #0d0e11;
   color: #f5f5f5;
   line-height: 1.6;
 }
@@ -17,7 +17,7 @@ body.transitioning {
 }
 
 header {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #141923, #1e3b63, #134f9d);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
@@ -167,17 +167,17 @@ footer {
 /* Light Theme */
 body.light-theme {
   background-color: #ffffff;
-  color: #1e1e2f;
+  color: #0d0e11;
 }
 
 body.light-theme header {
   background: linear-gradient(135deg, #dfe9f3, #ffffff);
-  color: #1e1e2f;
+  color: #0d0e11;
 }
 
 body.light-theme .project {
   background-color: #f0f0f0;
-  color: #1e1e2f;
+  color: #0d0e11;
 }
 
 body.light-theme .toggle-btn {
@@ -186,7 +186,7 @@ body.light-theme .toggle-btn {
 }
 
 body.light-theme .proficiency-item p {
-  color: #1e1e2f;
+  color: #0d0e11;
 }
 
 /* Responsive */
