@@ -62,7 +62,7 @@ h2 {
   border-radius: 8px;
   margin-bottom: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  transition: transform 1.3s ease, max-height 1.5s ease, opacity 1.5s ease;
+  transition: transform 0.5s ease, max-height 0.5s ease, opacity 0.5s ease;
   overflow: hidden;
   max-height: 1000px;
   opacity: 1;
@@ -171,7 +171,7 @@ footer {
   color: #f5f5f5;
   background-color: #1e3b63;
   padding: 4px 8px;
-  border-radius: 6px;
+  border-radius: 9px;
   margin: 0;
 }
 
