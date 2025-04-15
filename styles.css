@@ -1,6 +1,6 @@
 /* Global Styles */
-body, header, .project {
-  transition: background-color 0.3s ease, color 0.3s ease;
+body, header, .project, .toggle-btn, .theme-toggle, .proficiency-item p {
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body {
@@ -10,6 +10,10 @@ body {
   background-color: #1e1e2f;
   color: #f5f5f5;
   line-height: 1.6;
+}
+
+body.transitioning {
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header {
@@ -58,7 +62,20 @@ h2 {
   border-radius: 8px;
   margin-bottom: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project.hidden {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
 }
 
 .project:hover {
