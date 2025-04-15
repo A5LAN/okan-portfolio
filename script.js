@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Theme toggle button
-  const themeBtn = document.querySelector('#themeToggle'); // ✅ selects the correct button by ID
+  const themeBtn = document.querySelector('#themeToggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
       document.body.classList.toggle('light-theme');
