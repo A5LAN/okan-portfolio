@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Toggle visibility of projects
+  // Project toggle button
   const projectToggleBtn = document.querySelector('.toggle-btn');
   const projects = document.querySelectorAll('.project');
+
   if (projectToggleBtn) {
     projectToggleBtn.addEventListener('click', () => {
       projects.forEach(project => {
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Toggle Light/Dark Theme
+  // Theme toggle button
   const themeBtn = document.querySelector('.theme-toggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Typing animation for header title
+  // Typing animation in header
   const headerText = document.querySelector('header h1');
   if (headerText) {
     const text = headerText.innerText;
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
   }
 
-  // Fade-in animation for proficiency items
+  // Fade-in for proficiency items
   const items = document.querySelectorAll('.proficiency-item');
   items.forEach((item, i) => {
     item.style.opacity = 0;
