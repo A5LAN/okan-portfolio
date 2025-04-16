@@ -133,12 +133,6 @@ footer {
   color: inherit;
 }
 
-.toggle-btn:focus,
-.theme-toggle:focus {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
-}
-
 .proficiencies-container {
   text-align: center;
 }
