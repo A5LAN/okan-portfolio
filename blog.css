@@ -5,11 +5,14 @@ body {
   background-color: #f5f5f5;
   color: #0d0e11;
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  text-align: left;
+  text-align: center;
   margin-bottom: 3rem;
   font-size: 1.5rem;
   font-weight: 400;
@@ -17,48 +20,61 @@ h1 {
 }
 
 .main-content {
-  flex: 1;
   padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .nav-bar {
-  width: 220px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
-  border-left: 1px solid #ddd;
-  padding: 2rem 1rem;
-  box-shadow: -2px 0 6px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
-
-.nav-bar h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
 }
 
 .nav-bar ul {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  padding: 0;
+  gap: 2rem;
   margin: 0;
-}
-
-.nav-bar ul li {
-  margin: 1rem 0;
+  padding: 0;
 }
 
 .nav-bar ul li a {
   text-decoration: none;
-  color: #0d0e11;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.03rem;
+  transition: color 0.3s ease;
 }
 
 .nav-bar ul li a:hover {
-  color: #0077cc;
+  color: rgba(0, 101, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+  .nav-bar {
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-bar ul {
+    gap: 1rem;
+  }
+
+  .nav-bar ul li a {
+    font-size: 0.95rem;
+  }
 }
 
 .blog-grid {
@@ -66,7 +82,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1000px;
-  margin: auto;
+  margin: 5rem auto 2rem;
 }
 
 .blog-card {
