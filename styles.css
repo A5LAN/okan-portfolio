@@ -101,6 +101,18 @@ footer {
   color: white;
 }
 
+.blog-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 999;
+  color: inherit;
+}
+
 .toggle-btn, .theme-toggle {
   background-color: #00b894;
   color: white;
