@@ -7,8 +7,15 @@
     }
 
     h1 {
-      text-align: center;
+      text-align: left;
       margin-bottom: 3rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.05rem;
+    }
+
+    .nav-bar{
+      
     }
 
     .blog-grid {
