@@ -1,13 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Project toggle button
-  const projectToggleBtn = document.querySelector('.toggle-btn');
-  const projects = document.querySelectorAll('.project');
+  // Project expand/collapse toggles
+  const projectToggles = document.querySelectorAll('.project .expand-btn');
 
-  if (projectToggleBtn) {
-    projectToggleBtn.addEventListener('click', () => {
-      projects.forEach(project => {
-        project.classList.toggle('hidden');
-      });
+  projectToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const details = toggle.closest('.project').querySelector('.project-details');
+      if (details) {
+        details.classList.toggle('hidden');
+        toggle.textContent = details.classList.contains('hidden') ? 'Show Details' : 'Hide Details';
+      }
+    });
+  });
+
+  // Blog section toggle (🙋🏼‍♂️ button)
+  const blogToggleBtn = document.getElementById('blog-toggle');
+  const blogSection = document.getElementById('blog-section');
+
+  if (blogToggleBtn && blogSection) {
+    blogToggleBtn.addEventListener('click', () => {
+      blogSection.classList.toggle('hidden');
     });
   }
 
@@ -19,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     themeBtn.textContent = isLight ? '☀️' : '🌙';
   };
 
-  // Load theme preference
   if (localStorage.getItem('theme') === 'light') {
     document.body.classList.add('light-theme');
   }
