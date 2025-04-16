@@ -97,7 +97,7 @@ h2 {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #0f2027;
+  background-color: #2b3242;
   color: white;
 }
 
@@ -113,9 +113,16 @@ footer {
   color: inherit;
 }
 
+.toggle-btn, .blog-button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+
 .toggle-btn, .theme-toggle {
-  background-color: #00b894;
-  color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
