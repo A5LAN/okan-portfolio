@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Blog section toggle (🙋🏼‍♂️ button)
   const blogToggleBtn = document.getElementById('blog-toggle');
-  const blogSection = document.getElementById('blog-section');
 
-  if (blogToggleBtn && blogSection) {
-    blogToggleBtn.addEventListener('click', () => {
-      blogSection.classList.toggle('hidden');
-    });
-  }
+    if (blogToggleBtn) {
+      blogToggleBtn.addEventListener('click', () => {
+        window.location.href = 'blog.html';
+      });
+  } 
+
 
   // Theme toggle button with emoji swap and localStorage
   const themeBtn = document.querySelector('#theme-toggle');
