@@ -268,7 +268,7 @@ body.light-theme .proficiency-item img {
 }
 
 .blog-button {
-  right: 60px;
+  right: 20px;
 }
 
 /* Tablet Responsive (max-width: 768px) */
@@ -284,7 +284,7 @@ body.light-theme .proficiency-item img {
   }
 
   .blog-button {
-    right: 40px;
+    right: 16px;
   }
 }
 
@@ -297,11 +297,11 @@ body.light-theme .proficiency-item img {
   }
 
   .theme-toggle {
-    left: 12px;
+    left: 14px;
   }
 
   .blog-button {
-    right: 20px;
+    right: 14px;
   }
 }
 
