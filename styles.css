@@ -101,43 +101,12 @@ footer {
   color: white;
 }
 
-.blog-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 999;
-  color: inherit;
-}
-
 .toggle-btn, .blog-button {
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 1rem;
-}
-
-
-.toggle-btn, .theme-toggle {
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 1rem;
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: none;
-  font-size: 1.5rem;
-  z-index: 999;
-  color: inherit;
 }
 
 .proficiencies-container {
@@ -279,6 +248,61 @@ body.light-theme .proficiency-item img {
 
 .about-photo:hover {
   transform: scale(1.05);
+}
+
+/* Enhanced Responsive Controls for Theme Toggle and Blog Button */
+.theme-toggle,
+.blog-button {
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  z-index: 999;
+  color: inherit;
+}
+
+.theme-toggle {
+  left: 20px;
+}
+
+.blog-button {
+  right: 60px;
+}
+
+/* Tablet Responsive (max-width: 768px) */
+@media (max-width: 768px) {
+  .theme-toggle,
+  .blog-button {
+    font-size: 1.4rem;
+    top: 18px;
+  }
+
+  .theme-toggle {
+    left: 16px;
+  }
+
+  .blog-button {
+    right: 40px;
+  }
+}
+
+/* Mobile Responsive (max-width: 480px) */
+@media (max-width: 480px) {
+  .theme-toggle,
+  .blog-button {
+    font-size: 1.1rem;
+    top: 16px;
+  }
+
+  .theme-toggle {
+    left: 12px;
+  }
+
+  .blog-button {
+    right: 20px;
+  }
 }
 
 /* Responsive */
