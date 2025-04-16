@@ -42,21 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutSection = document.getElementById('about');
     const scrollArrow = document.getElementById('scrollToTop');
 
-      if (!aboutSection || !scrollArrow) return;
+    if (!aboutSection || !scrollArrow) return;
 
     const triggerPoint = aboutSection.offsetTop + aboutSection.offsetHeight;
 
-      if (window.scrollY > triggerPoint) {
+    if (window.scrollY > triggerPoint) {
       scrollArrow.classList.add('visible');
-      } else {
-        scrollArrow.classList.remove('visible');
-      }
-    });
+    } else {
+      scrollArrow.classList.remove('visible');
+    }
+  });
 
-// Smooth scroll to top
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+  // Smooth scroll to top
+  const scrollArrow = document.getElementById('scrollToTop');
+  if (scrollArrow) {
+    scrollArrow.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   // Typing animation in header
   const headerText = document.querySelector('header h1');
