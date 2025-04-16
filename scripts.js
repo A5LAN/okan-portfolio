@@ -37,6 +37,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Show arrow after scrolling past the #about section
+  window.addEventListener('scroll', () => {
+    const aboutSection = document.getElementById('about');
+    const scrollArrow = document.getElementById('scrollToTop');
+
+      if (!aboutSection || !scrollArrow) return;
+
+    const triggerPoint = aboutSection.offsetTop + aboutSection.offsetHeight;
+
+      if (window.scrollY > triggerPoint) {
+      scrollArrow.classList.add('visible');
+      } else {
+        scrollArrow.classList.remove('visible');
+      }
+    });
+
+// Smooth scroll to top
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
   // Typing animation in header
   const headerText = document.querySelector('header h1');
   if (headerText) {
