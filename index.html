@@ -6,10 +6,11 @@
   <title>Okan Dodanli | GIS Consultant Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js"></script>
+  <script defer src="scripts.js"></script>
 </head>
 <body class="light-theme">
-<button id="theme-toggle" class="theme-toggle">🌙</button>
+  <button id="theme-toggle" class="theme-toggle">🌙</button>
+
   <header>
     <h1>Okan&nbsp;&nbsp;Dodanli</h1>
     <p>GIS Analyst | Remote Sensing | Web Mapping | Python Automation</p>
@@ -18,11 +19,11 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-        <div class="about-content">
-          <img src="https://media.licdn.com/dms/image/v2/D5616AQHmcYTt9uO_vA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1729018874842?e=1750291200&v=beta&t=tF3uqgHOblqGfuCyG420WRs0UAspMtzI8vOec5IwMJ4" alt="Your Name" class="about-photo" />
-            <p>
-              Hello! I'm Okan Dodanli, a GIS Analyst with a background in geography, sales, and aviation. I specialize in geospatial analysis, remote sensing, and cloud platforms. I bring a passion for tech, a detail-oriented mindset, and a love for solving complex spatial problems.
-            </p>
+      <div class="about-content">
+        <img src="https://media.licdn.com/dms/image/v2/D5616AQHmcYTt9uO_vA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1729018874842?e=1750291200&v=beta&t=tF3uqgHOblqGfuCyG420WRs0UAspMtzI8vOec5IwMJ4" alt="Your Name" class="about-photo" />
+        <p>
+          Hello! I'm Okan Dodanli, a GIS Analyst with a background in geography, sales, and aviation. I specialize in geospatial analysis, remote sensing, and cloud platforms. I bring a passion for tech, a detail-oriented mindset, and a love for solving complex spatial problems.
+        </p>
       </div>
     </section>
 
@@ -30,7 +31,6 @@
       <h2>Proficiencies</h2>
       <div class="proficiencies-container">
         <div class="proficiencies-grid">
-          
           <div class="highlighted">
             <img src="images/remote_sensing.png" alt="Remote Sensing">
             <p>Remote Sensing — 4 Years</p>
@@ -54,7 +54,7 @@
             <p>SQL — 6 Years</p>
           </div>
           <div class="proficiency-item">
-            <img src="images/python.png" alt="Python">   <!-- https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/360px-Python.svg.png -->
+            <img src="images/python.png" alt="Python">
             <p>Python — 8 Years</p>
           </div>
           <div class="proficiency-item">
@@ -111,5 +111,18 @@
   <footer>
     &copy; 2025 Okan Dodanli. All rights reserved.
   </footer>
+
+  <!-- Scroll To Top Arrow -->
+  <div id="scrollToTop" class="scroll-arrow" onclick="scrollToTop()" aria-label="Scroll to top">
+    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="upArrowGradient" x1="0" y1="60" x2="60" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#6EE7B7"/>
+          <stop offset="100%" stop-color="#3B82F6"/>
+        </linearGradient>
+      </defs>
+      <path d="M10 40 L30 15 L50 40" stroke="url(#upArrowGradient)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
 </body>
 </html>
