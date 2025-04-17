@@ -13,7 +13,15 @@
   </header>
 
   <nav class="nav-bar">
-    <ul>
+    <!-- Burger icon for mobile -->
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navigation menu -->
+    <ul id="nav-menu">
       <li><a class="un" href="index.html">Home<span class="underline"></span></a></li>
       <li><a class="un" href="index.html">About Me<span class="underline"></span></a></li>
       <li><a class="un" href="index.html">Projects<span class="underline"></span></a></li>
@@ -37,5 +45,13 @@
       </a>
     </div>
   </div>
+
+  <script>
+    // Toggle the navigation menu when the burger icon is clicked
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
