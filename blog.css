@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
+  padding: 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
   font-size: 1rem;
@@ -22,8 +22,9 @@ body {
 }
 
 .navbar .logo {
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 4px;
   color: #111;
   text-decoration: none;
 }
@@ -31,6 +32,10 @@ body {
 .navbar .nav-links {
   display: flex;
   gap: 1.5rem;
+}
+
+.navbar .nav-links li {
+  list-style-type:none;
 }
 
 /* Apply hover underline animation to links */
