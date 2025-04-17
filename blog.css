@@ -147,74 +147,98 @@ header h1 {
 /* Blog Grid Layout */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 1500px;
   margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .blog-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
 .blog-card img {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
 }
 
 .blog-details {
-  padding: 1rem;
+  text-align:center;
+  padding: 1.2rem;
 }
 
 .date {
+  text-align: center;
   font-size: 0.85rem;
-  font-weight: 200;
-  color: #555;
+  font-weight: 300;
+  color: #777;
 }
 
-h2 {
+.blog-details h2 {
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 0.5rem;
-  color: #333;
+  margin-bottom: 0.3rem;
+  color: #222;
 }
 
 .description {
   font-size: 1rem;
-  color: #333;
-  margin: 0.5rem 0;
+  color: #444;
+  margin: 0.5rem 0 1rem;
+  line-height: 1.5;
 }
 
 .read-more {
-  background-color: #0065ff;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  color: #444;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.7rem;
+  font-weight: 500;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .read-more:hover {
-  background-color: #004dcb;
+  background-color: #004bb5;
 }
 
-/* Media Queries for responsive blog grid */
-@media (max-width: 768px) {
+/* Responsive Grid Tweaks */
+@media (max-width: 1024px) {
   .blog-grid {
-    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-card img {
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
   .blog-grid {
-    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .blog-card img {
+    height: 160px;
   }
 }
