@@ -1,24 +1,51 @@
+/* === Font and Base Styling === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  color: #111;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #0d0e11;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.un {
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Apply hover underline animation to links */
+.navbar .nav-links a {
   position: relative;
   display: inline-block;
-  padding-bottom: 2px;
   text-decoration: none;
   color: #333;
+  font-weight: 500;
+  padding-bottom: 2px;
   overflow: hidden;
 }
 
-.underline {
+/* Hover underline animation */
+.navbar .nav-links a .underline {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -30,131 +57,27 @@ body {
   transition: transform 0.4s ease-out;
 }
 
-/* On hover: expand from left to right */
-.un:hover .underline {
+.navbar .nav-links a:hover .underline {
   transform: scaleX(1);
 }
 
-/* On hover out: collapse from left to right */
-.un:not(:hover) .underline {
-  transform-origin: right; /* makes it collapse toward the right */
+.navbar .nav-links a:not(:hover) .underline {
+  transform-origin: right;
   transform: scaleX(0);
   transition: transform 0.4s ease-in;
 }
 
-header h1 {
-  margin-left: 4rem; /* Adjusted for larger screens */
-  margin-top: 2rem;
-  text-align: left;
-  margin-bottom: -0.6rem;
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.05rem;
-}
-
-.main-content {
-  padding: 2rem;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.nav-bar {
-  position: relative;
-  left: 75%;
-  padding-right: 4rem; /* Adjusted for larger screens */
-  margin-top: -0.12rem;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Lato', sans-serif;
-}
-
-.nav-bar ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-bar ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: 0.03rem;
-  transition: color 0.3s ease;
-}
-
-.nav-bar ul li a:hover {
-  color: rgba(0, 101, 255, 0.5);
-}
-
-/* Add burger icon */
-.nav-bar .burger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.nav-bar .burger div {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  border-radius: 5px;
-}
-
-/* Media query for screens smaller than 600px */
-@media (max-width: 600px) {
-  .nav-bar {
-    padding-right: 2rem; /* Reduced for smaller screens */
-  }
-
-  .nav-bar ul {
-    display: none; /* Hide menu items by default */
-    gap: 1rem;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust as needed */
-    right: 10px;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-bar ul.show {
-    display: flex; /* Show the menu when toggled */
-  }
-
-  .nav-bar ul li a {
-    font-size: 1rem; /* Adjust size for mobile */
-  }
-
-  header h1 {
-    margin-left: 2rem; /* Reduced for smaller screens */
-  }
-
-  /* Show burger icon on mobile */
-  .nav-bar .burger {
-    display: flex;
-  }
-}
-
-/* Blog Grid Layout */
+/* === Blog Grid Layout === */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3rem;
   max-width: 1500px;
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
 }
 
+/* === Blog Card === */
 .blog-card {
   background-color: #fff;
   border-radius: 12px;
@@ -172,73 +95,57 @@ header h1 {
 
 .blog-card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
+.blog-card:hover img {
+  transform: scale(1.03);
+}
+
+/* === Blog Details === */
 .blog-details {
-  text-align:center;
+  text-align: center;
   padding: 1.2rem;
 }
 
 .date {
-  text-align: center;
   font-size: 0.85rem;
   font-weight: 300;
   color: #777;
 }
 
 .blog-details h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 0.5rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.6rem 0;
   color: #222;
 }
 
-.description {
+.blog-details p {
   font-size: 1rem;
-  color: #444;
-  margin: 0.5rem 0 1rem;
   line-height: 1.5;
-}
-
-.read-more {
   color: #444;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.7rem;
-  font-weight: 500;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
 }
 
-.read-more:hover {
-  background-color: #004bb5;
-}
-
-/* Responsive Grid Tweaks */
-@media (max-width: 1024px) {
+/* === Responsive Tweaks === */
+@media screen and (max-width: 768px) {
   .blog-grid {
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .blog-card img {
-    height: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .blog-grid {
-    padding: 1rem;
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
 
-  .blog-card img {
-    height: 160px;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
   }
 }
