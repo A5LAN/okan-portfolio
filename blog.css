@@ -42,9 +42,8 @@ body {
   transition: transform 0.4s ease-in;
 }
 
-
 header h1 {
-  margin-left: 2rem;
+  margin-left: 4rem; /* Adjusted for larger screens */
   margin-top: 2rem;
   text-align: left;
   margin-bottom: -0.6rem;
@@ -62,7 +61,7 @@ header h1 {
 .nav-bar {
   position: relative;
   left: 75%;
-  padding-right: 2rem;
+  padding-right: 4rem; /* Adjusted for larger screens */
   margin-top: -0.12rem;
   transform: translate(-50%, -50%);
   display: flex;
@@ -93,56 +92,54 @@ header h1 {
   color: rgba(0, 101, 255, 0.5);
 }
 
+/* Add burger icon */
+.nav-bar .burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-bar .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
   .nav-bar {
-    padding: 0.75rem 1rem;
+    padding-right: 2rem; /* Reduced for smaller screens */
   }
 
   .nav-bar ul {
+    display: none; /* Hide menu items by default */
     gap: 1rem;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 10px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-bar ul.show {
+    display: flex; /* Show the menu when toggled */
   }
 
   .nav-bar ul li a {
-    font-size: 0.95rem;
+    font-size: 1rem; /* Adjust size for mobile */
   }
-}
 
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 5rem auto 2rem;
-}
+  header h1 {
+    margin-left: 2rem; /* Reduced for smaller screens */
+  }
 
-.blog-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-}
-
-.blog-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.blog-card h2 {
-  font-size: 1.3rem;
-  margin: 1rem;
-}
-
-.blog-card p {
-  margin: 0 1rem 1.5rem;
-  font-size: 0.95rem;
-  color: #333;
+  /* Show burger icon on mobile */
+  .nav-bar .burger {
+    display: flex;
+  }
 }
